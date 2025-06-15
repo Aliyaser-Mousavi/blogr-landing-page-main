@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Blogr</title>
+  </head>
+  <body class="overflow-x-hidden">
+    <header
+      class="bg-[#FF5F5F] w-full h-[450px] rounded-bl-[90px] relative overflow-hidden"
+    >
+      <img
+        src="/src/images/bg-pattern-intro-desktop.svg"
+        class="absolute w-[2000px] lg:-top-20 md:top-0 top-20 left-1/2 -translate-x-1/2 -translate-y-1/4 -z-0"
+      />
+
+      <div class="max-w-7xl mx-auto px-4 pt-6 relative z-10">
+        <div class="flex items-center justify-between">
+          <img src="/src/images/logo.svg" alt="logo" />
+
+          <button id="menu-toggle" class="md:hidden focus:outline-none z-50">
+            <svg
+              id="hamburger-icon"
+              class="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+            <svg
+              id="close-icon"
+              class="w-6 h-6 text-white hidden"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+
+          <nav class="hidden md:flex items-center gap-8 text-sm relative z-50">
+            <div class="relative group">
+              <button
+                class="flex items-center gap-1 relative text-gray-300 hover:text-white after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-1 after:rounded-full after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-400 after:origin-left after:bg-gradient-to-r after:from-[#1D2C5E] after:to-[#ffffff] pb-1 font-medium text-lg"
+              >
+                Product
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </button>
+              <div
+                class="absolute top-full -left-5 mt-2 w-30 bg-white text-gray-700 rounded py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 shadow-2xl"
+              >
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                  >Overview</a
+                >
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                  >Pricing</a
+                >
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                  >Marketplace</a
+                >
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                  >Features</a
+                >
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                  >Integrations</a
+                >
+              </div>
+            </div>
+
+            <div class="relative group">
+              <button
+                class="flex items-center gap-1 relative text-gray-300 hover:text-white after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-1 after:rounded-full after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-400 after:origin-left after:bg-gradient-to-r after:from-[#1D2C5E] after:to-[#ffffff] pb-1 font-medium text-lg"
+              >
+                Company
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </button>
+              <div
+                class="absolute top-full -left-3 mt-2 w-30 bg-white text-gray-700 rounded py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 shadow-2xl"
+              >
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">About</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Team</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Blog</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                  >Careers</a
+                >
+              </div>
+            </div>
+
+            <div class="relative group">
+              <button
+                class="flex items-center gap-1 relative text-gray-300 hover:text-white after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-1 after:rounded-full after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-400 after:origin-left after:bg-gradient-to-r after:from-[#1D2C5E] after:to-[#ffffff] pb-1 font-medium text-lg"
+              >
+                Connect
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </button>
+              <div
+                class="absolute top-full -left-4 mt-2 w-30 bg-white text-gray-700 rounded py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 shadow-2xl"
+              >
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                  >Contact</a
+                >
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                  >Newsletter</a
+                >
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                  >LinkedIn</a
+                >
+              </div>
+            </div>
+
+            <a
+              href="#"
+              class="relative text-gray-300 hover:text-white after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-1 after:rounded-full after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-400 after:origin-left after:bg-gradient-to-r after:from-[#1D2C5E] after:to-[#ffffff] pb-1 font-medium text-lg"
+              >Login</a
+            >
+            <a
+              href="#"
+              class="bg-gradient-to-r from-[#fb3b01] to-[#1D2C5E] text-white font-semibold py-2 px-5 rounded-full transition-all duration-1000 hover:from-[#1D2C5E] hover:to-[#f83c02] text-lg z-50"
+            >
+              Sign Up
+            </a>
+          </nav>
+        </div>
+
+        <div
+          id="mobile-menu"
+          class="md:hidden hidden flex-col gap-2 absolute top-20 left-4 right-4 bg-white rounded-xl shadow-xl p-6 z-40"
+        >
+          <div class="mobile-dropdown">
+            <button
+              class="w-full flex justify-between items-center font-medium text-gray-800 dropdown-toggle"
+            >
+              Product
+              <span class="rotate-0 transition-transform">&#9660;</span>
+            </button>
+            <div class="dropdown-content hidden pl-4 text-sm text-gray-700">
+              <a href="#" class="block py-1">Overview</a>
+              <a href="#" class="block py-1">Pricing</a>
+              <a href="#" class="block py-1">Marketplace</a>
+              <a href="#" class="block py-1">Features</a>
+              <a href="#" class="block py-1">Integrations</a>
+            </div>
+          </div>
+
+          <div class="mobile-dropdown">
+            <button
+              class="w-full flex justify-between items-center font-medium text-gray-800 dropdown-toggle"
+            >
+              Company
+              <span class="rotate-0 transition-transform">&#9660;</span>
+            </button>
+            <div class="dropdown-content hidden pl-4 text-sm text-gray-700">
+              <a href="#" class="block py-1">About</a>
+              <a href="#" class="block py-1">Team</a>
+              <a href="#" class="block py-1">Blog</a>
+              <a href="#" class="block py-1">Careers</a>
+            </div>
+          </div>
+
+          <div class="mobile-dropdown">
+            <button
+              class="w-full flex justify-between items-center font-medium text-gray-800 dropdown-toggle"
+            >
+              Connect
+              <span class="rotate-0 transition-transform">&#9660;</span>
+            </button>
+            <div class="dropdown-content hidden pl-4 text-sm text-gray-700">
+              <a href="#" class="block py-1">Contact</a>
+              <a href="#" class="block py-1">Newsletter</a>
+              <a href="#" class="block py-1">LinkedIn</a>
+            </div>
+          </div>
+
+          <hr class="my-2 pb-6" />
+          <a href="#" class="text-gray-800 font-medium mt-4 mr-6">Login</a>
+          <a
+            href="#"
+            class="bg-gradient-to-r from-[#fb3b01] to-[#1D2C5E] text-white text-center font-semibold py-2 px-5 rounded-full hover:from-[#1D2C5E] hover:to-[#f83c02] mt-4"
+          >
+            Sign Up
+          </a>
+        </div>
+      </div>
+      <div class="max-w-7xl mx-auto p-4 z-0 lg:mt-28 md:mt-24 mt-16 relative">
+        <h1
+          class="text-center text-white font-semibold lg:text-5xl md:text-4xl text-3xl"
+        >
+          A modern publishing platform
+        </h1>
+        <p class="text-center text-white mt-6">
+          Grow your audience and build your online brand
+        </p>
+        <div class="flex justify-center items-center gap-4 mt-10">
+          <div>
+            <a
+              href="#"
+              class="bg-gradient-to-r from-[#fb3b01] to-[#1D2C5E] text-white font-semibold py-2 px-5 rounded-full transition-all duration-1000 hover:from-[#1D2C5E] hover:to-[#f83c02] text-lg z-50 md:text-[16px] text-[14px] md:text-lg"
+              >Start for Free</a
+            >
+          </div>
+          <div>
+            <a
+              href="#"
+              class="bg-gradient-to-r from-[#ffffff] to-[#1D2C5E] text-[#fb3b01] font-semibold py-2 px-5 rounded-full transition-all duration-1000 hover:from-[#1D2C5E] hover:to-[#ffffff] md:text-[16px] text-[14px] md:text-lg z-50"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="future bg-white">
+      <div class="relative overflow-hidden h-auto lg:h-[730px]">
+        <div class="max-w-7xl mx-auto p-4">
+          <h2
+            class="text-center text-[#1D2C5E] font-medium lg:text-4xl md:text-3xl text-2xl mt-20"
+          >
+            Designed for the future
+          </h2>
+          <div
+            class="flex items-center justify-between flex-col-reverse md:flex-row gap-8 pt-24"
+          >
+            <div class="space-y-8 md:pt-0 sm:pt-80 pt-60">
+              <div class="space-y-4">
+                <p class="text-[#1D2C5E] lg:text-3xl text-2xl">
+                  Introducing an extensible editor
+                </p>
+                <p
+                  class="text-gray-400 text-[14px] md:text-[16px] lg:max-w-[500px] md:max-w-[400px]"
+                >
+                  Blogr features an exceedingly intuitive interface which lets
+                  you focus on one thing: creating content. The editor supports
+                  management of multiple blogs and allows easy manipulation of
+                  embeds such as images, videos, and Markdown. Extensibility
+                  with plugins and themes provide easy ways to add functionality
+                  or change the looks of a blog.
+                </p>
+              </div>
+              <div class="space-y-4">
+                <p class="text-[#1D2C5E] lg:text-3xl text-2xl">
+                  Robust content management
+                </p>
+                <p
+                  class="text-gray-400 text-[14px] md:text-[16px] max-w-[500px] md:max-w-[400px]"
+                >
+                  Flexible content management enables users to easily move
+                  through posts. Increase the usability of your blog by adding
+                  customized categories, sections, format, or flow. With this
+                  functionality, you’re in full control.
+                </p>
+              </div>
+            </div>
+            <div class="">
+              <img
+                src="/src/images/illustration-editor-desktop.png"
+                alt="Colorful illustration of a modern blog editor interface with toolbars and content blocks displayed on a computer screen, set against a clean white background with abstract shapes, conveying a creative and inviting atmosphere"
+                class="absolute md:top-10 sm:top-40 top-36 lg:-right-52 2xl:left-1/2 lg:w-[700px] md:w-[500px] md:-right-36 sm:w-[400px] w-[300px]"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="relative bg-[#26263b] rounded-tr-[90px] rounded-bl-[90px] lg:h-[340px] overflow-hidden md:h-96 h-[580px]"
+    >
+      <img
+        src="/src/images/bg-pattern-circles.png"
+        alt="Overlapping semi-transparent circles..."
+        class="absolute lg:-left-36 -top-6 transform -translate-y-1/2 -z-0 pointer-events-none w-[700px]"
+      />
+      <div class="max-w-7xl mx-auto p-4">
+        <div
+          class="flex items-center justify-between text-center sm:text-left md:flex-row flex-col"
+        >
+          <div class="relative">
+            <img
+              src="/src/images/illustration-phones.png"
+              alt="Two modern smartphones standing upright side by side, displaying vibrant user interface screens with colorful gradients and rounded elements, set against a dark abstract background with overlapping circles, conveying a sleek and innovative digital experience"
+              class="z-0 max-w-[330px]"
+            />
+          </div>
+          <div class="relative space-y-6">
+            <p
+              class="text-[#ffffff] font-medium lg:text-4xl md:text-3xl text-2xl z-20"
+            >
+              State of the Art Infrastructure
+            </p>
+            <p
+              class="text-gray-300 text-[14px] md:text-[16px] lg:max-w-[500px] md:max-w-[400px] z-20"
+            >
+              With reliability and speed in mind, worldwide data centers provide
+              the backbone for ultra-fast connectivity. This ensures your site
+              will load instantly, no matter where your readers are, keeping
+              your site competitive.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="future bg-white">
+      <div class="relative overflow-hidden h-auto lg:h-[730px]">
+        <div class="max-w-7xl mx-auto p-4">
+          <div
+            class="flex items-center justify-between flex-col-reverse md:flex-row gap-8 pt-24"
+          >
+            <div class="">
+              <img
+                src="/src/images/illustration-laptop-desktop.png"
+                alt="Colorful illustration of a modern blog editor interface with toolbars and content blocks displayed on a computer screen, set against a clean white background with abstract shapes, conveying a creative and inviting atmosphere"
+                class="absolute md:top-10 sm:top-20 top-14 lg:w-[700px] md:w-[500px] lg:-left-50 md:-left-36 sm:right-36 right-24 sm:w-[400px] w-[300px]"
+              />
+            </div>
+            <div class="space-y-8 md:pt-0 sm:pt-80 pt-60">
+              <div class="space-y-4">
+                <p class="text-[#1D2C5E] lg:text-3xl text-2xl">
+                  Free, open, simple
+                </p>
+                <p
+                  class="text-gray-400 text-[14px] md:text-[16px] lg:max-w-[500px] md:max-w-[400px]"
+                >
+                  Blogr is a free and open source application backed by a large
+                  community of helpful developers. It supports features such as
+                  code syntax highlighting, RSS feeds, social media integration,
+                  third-party commenting tools, and works seamlessly with Google
+                  Analytics. The architecture is clean and is relatively easy to
+                  learn.
+                </p>
+              </div>
+              <div class="space-y-4">
+                <p class="text-[#1D2C5E] lg:text-3xl text-2xl">
+                  Powerful tooling
+                </p>
+                <p
+                  class="text-gray-400 text-[14px] md:text-[16px] max-w-[500px] md:max-w-[400px]"
+                >
+                  Batteries included. We built a simple and straightforward CLI
+                  tool that makes customization and deployment a breeze, but
+                  capable of producing even the most complicated sites.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="bg-black w-full rounded-tr-[90px]">
+        <div
+          class="max-w-7xl mx-auto p-4 pt-10 pb-10 flex items-center justify-center space-y-6 md:space-y-0 md:flex-row flex-col"
+        >
+          <div class="w-2/6 space-y-10">
+            <div
+              class="flex items-center justify-center md:items-start md:justify-start"
+            >
+              <img src="/src/images/logo.svg" alt="logo" />
+            </div>
+            <div
+              class="flex gap-3 items-center justify-center md:items-start md:justify-start"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-facebook-icon lucide-facebook text-white hover:text-[#7184c1] cursor-pointer"
+              >
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-youtube-icon lucide-youtube text-white hover:text-[#F25C2E] cursor-pointer"
+              >
+                <path
+                  d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"
+                />
+                <path d="m10 15 5-3-5-3z" />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-twitter-icon lucide-twitter text-white hover:text-[#7184c1] cursor-pointer"
+              >
+                <path
+                  d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-linkedin-icon lucide-linkedin text-white hover:text-[#F25C2E] cursor-pointer"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                />
+                <rect width="4" height="12" x="2" y="9" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-instagram-icon lucide-instagram text-white hover:text-[#7184c1] cursor-pointer"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+              </svg>
+            </div>
+          </div>
+          <div class="w-1/6">
+            <nav>
+              <ul
+                class="flex flex-col gap-4 items-center justify-center md:items-start md:justify-start"
+              >
+                <a href="#"
+                  ><li
+                    class="relative text-gray-300 hover:text-white after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-1 after:rounded-full after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-400 after:origin-left after:bg-gradient-to-r after:from-[#1D2C5E] after:to-[#ffffff] pb-1"
+                  >
+                    About Us
+                  </li></a
+                >
+                <a href="#"
+                  ><li
+                    class="relative text-white hover:text-[#7184c1] after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-1 after:rounded-full after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left after:bg-gradient-to-r after:from-[#7184c1] after:to-[#F25C2E] w-16 pb-1"
+                  >
+                    Contact
+                  </li></a
+                >
+                <a href="#"
+                  ><li
+                    class="relative text-white hover:text-[#F25C2E] after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-1 after:rounded-full after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left after:bg-gradient-to-r after:from-[#F25C2E] after:to-[#7184c1] w-12 pb-1"
+                  >
+                    Blog
+                  </li></a
+                >
+              </ul>
+            </nav>
+          </div>
+          <div class="w-1/6">
+            <nav>
+              <ul
+                class="flex flex-col gap-4 items-center justify-center md:items-start md:justify-start"
+              >
+                <a href="#"
+                  ><li
+                    class="relative text-white hover:text-[#7184c1] after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-1 after:rounded-full after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left after:bg-gradient-to-r after:from-[#7184c1] after:to-[#F25C2E] w-16 pb-1"
+                  >
+                    Careers
+                  </li></a
+                >
+                <a href="#"
+                  ><li
+                    class="relative text-white hover:text-[#F25C2E] after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-1 after:rounded-full after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left after:bg-gradient-to-r after:from-[#F25C2E] after:to-[#7184c1] w-16 pb-1"
+                  >
+                    Support
+                  </li></a
+                >
+                <a href="#"
+                  ><li
+                    class="relative text-gray-300 hover:text-white after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-1 after:rounded-full after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-400 after:origin-left after:bg-gradient-to-r after:from-[#1D2C5E] after:to-[#ffffff] pb-1"
+                  >
+                    Privacy Policy
+                  </li></a
+                >
+              </ul>
+            </nav>
+          </div>
+          <div class="w-2/6">
+            <div
+              class="flex items-center justify-center md:items-start md:justify-start gap-3"
+            >
+              <input
+                type="text"
+                placeholder="Updates in your inbox..."
+                class="px-6 py-2.5 rounded-full text-sm text-gray-500 placeholder-gray-400 focus:outline-none bg-white shadow"
+              />
+
+              <a
+                href="#"
+                class="bg-gradient-to-r from-[#1D2C5E] to-[#F25C2E] text-white font-semibold py-2 px-4 rounded-full transition-all duration-500 hover:bg-gradient-to-r hover:from-[#F25C2E] hover:to-[#1D2C5E]"
+                >Go</a
+              >
+            </div>
+            <div class="md:block hidden">
+              <div class="pt-8 flex flex-row items-center">
+                <p class="text-[#7184c1]">Copyright 2020.</p>
+                <p class="text-[#F25C2E]">All Rights Reserved</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const hamburgerIcon = document.getElementById("hamburger-icon");
+      const closeIcon = document.getElementById("close-icon");
+
+      // Toggle mobile menu
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        hamburgerIcon.classList.toggle("hidden");
+        closeIcon.classList.toggle("hidden");
+      });
+
+      // Toggle dropdowns in mobile
+      const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+
+      dropdownToggles.forEach((toggle) => {
+        toggle.addEventListener("click", () => {
+          const dropdown = toggle.nextElementSibling;
+          const arrow = toggle.querySelector("span");
+
+          dropdown.classList.toggle("hidden");
+          arrow.classList.toggle("rotate-180");
+        });
+      });
+    </script>
+  </body>
+</html>
